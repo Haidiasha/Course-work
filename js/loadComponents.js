@@ -26,8 +26,8 @@ function showAuthModal() {
         <p>Для перегляду послуг необхідно увійти або зареєструватися</p>
       </div>
       <div class="modal-actions">
-        <a href="../html/login.html?form=login" class="btn btn-outline">Увійти</a>
-        <a href="../html/login.html?form=register" class="btn btn-primary">Зареєструватися</a>
+        <a href="/Course-work/html/login.html?form=login" class="btn btn-outline">Увійти</a>
+        <a href="/Course-work/html/login.html?form=register" class="btn btn-primary">Зареєструватися</a>
       </div>
       <button class="close-modal">&times;</button>
     </div>
@@ -77,19 +77,19 @@ async function loadHeader() {
       <header>
         <div class="container">
           <div class="header-content">
-            <a href="../index.html" class="logo">Help<span>&</span>Home</a>
+            <a href="/Course-work/index.html" class="logo">Help<span>&</span>Home</a>
             <nav>
               <ul>
-                <li><a href="../index.html">Головна</a></li>
-                <li><a href="../html/search.html">Послуги</a></li>
-                <li><a href="../index.html#how-it-works">Як це працює</a></li>
-                <li><a href="../index.html#benefits">Про нас</a></li>
-                <li><a href="../index.html#contacts">Контакти</a></li>
+                <li><a href="/Course-work/index.html">Головна</a></li>
+                <li><a href="/Course-work/html/search.html">Послуги</a></li>
+                <li><a href="/Course-work/index.html#how-it-works">Як це працює</a></li>
+                <li><a href="/Course-work/index.html#benefits">Про нас</a></li>
+                <li><a href="/Course-work/index.html#contacts">Контакти</a></li>
               </ul>
             </nav>
             <div class="auth-buttons">
-              <a href="../html/login.html?form=login" class="btn btn-outline">Увійти</a>
-              <a href="../html/login.html?form=register" class="btn btn-primary">Зареєструватися</a>
+              <a href="/Course-work/html/login.html?form=login" class="btn btn-outline">Увійти</a>
+              <a href="/Course-work/html/login.html?form=register" class="btn btn-primary">Зареєструватися</a>
             </div>
           </div>
         </div>
@@ -116,9 +116,9 @@ async function loadHeader() {
           <div class="user-avatar">${avatar}</div>
           <span>${name}</span>
           <div class="dropdown-menu">
-            <a href="../html/profile.html">Мій профіль</a>
-            <a href="../html/edit-profile.html">Налаштування</a>
-            <a href="../html/chats.html">Мої повідомлення</a>
+            <a href="/Course-work/html/profile.html">Мій профіль</a>
+            <a href="/Course-work/html/edit-profile.html">Налаштування</a>
+            <a href="/Course-work/html/chats.html">Мої повідомлення</a>
             <hr>
             <a href="#" id="logout">Вийти</a>
           </div>
@@ -133,11 +133,11 @@ async function loadHeader() {
             <a href="../index.html" class="logo">Help<span>&</span>Home</a>
             <nav>
               <ul>
-                <li><a href="../index.html">Головна</a></li>
-                <li><a href="../html/search.html">Послуги</a></li>
-                <li><a href="../index.html#how-it-works">Як це працює</a></li>
-                <li><a href="../index.html#benefits">Про нас</a></li>
-                <li><a href="../index.html#contacts">Контакти</a></li>
+                <li><a href="/Course-work/index.html">Головна</a></li>
+                <li><a href="/Course-work/html/search.html">Послуги</a></li>
+                <li><a href="/Course-work/index.html#how-it-works">Як це працює</a></li>
+                <li><a href="/Course-work/index.html#benefits">Про нас</a></li>
+                <li><a href="/Course-work/index.html#contacts">Контакти</a></li>
               </ul>
             </nav>
             ${userMenuHtml}
@@ -150,7 +150,7 @@ async function loadHeader() {
     logoutButton.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.clear();
-      window.location.href = "../index.html";
+      window.location.href = "/Course-work/index.html";
     });
   }
 }
