@@ -148,7 +148,7 @@ async function loadHeader() {
 }
 
 async function loadFooter() {
-  const response = await fetch("/html/footer.html");
+  const response = await fetch("../html/footer.html");
   const html = await response.text();
   document.getElementById("footer").innerHTML = html;
 }
