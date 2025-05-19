@@ -103,7 +103,7 @@ async function loadHeader() {
           <div class="user-avatar">${avatar}</div>
           <span>${name}</span>
           <div class="dropdown-menu">
-            <a href="../html/analytics.html">Аналітика</a>
+            <a href="/Course-work/html/analytics.html">Аналітика</a>
             <a href="#">Налаштування</a>
             <hr>
             <a href="#" id="logout">Вийти</a>

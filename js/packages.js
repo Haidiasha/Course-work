@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("pendingPrice", packagePrice);
 
         closeModalWindow();
-        window.location.href = "/Course-work//html/payment.html";
+        window.location.href = "/Course-work/html/payment.html";
       };
     });
   });
