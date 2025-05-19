@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const role = localStorage.getItem("role");
 
   if (!role) {
-    window.location.href = "login.html";
+    window.location.href = "/Course-work//html/login.html";
     return;
   }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("pendingPrice", packagePrice);
 
         closeModalWindow();
-        window.location.href = "payment.html";
+        window.location.href = "/Course-work//html/payment.html";
       };
     });
   });

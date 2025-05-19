@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   } else {
     alert("Ви не авторизовані! Поверніться на сторінку входу.");
-    window.location.href = "/html/login.html";
+    window.location.href = "/Course-work/html/login.html";
   }
 
   const logoutButton = document.querySelector(".dropdown-menu a[href='#logout']");
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (logoutButton) {
     logoutButton.addEventListener("click", function () {
       localStorage.clear();
-      window.location.href = "/html/login.html";
+      window.location.href = "/Course-work/html/login.html";
     });
   }
 
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const createOrderBtn = document.querySelector(".employer-order");
   if (createOrderBtn) {
     createOrderBtn.addEventListener("click", function () {
-      window.location.href = "add-order.html";
+      window.location.href = "/Course-work/html/add-order.html";
     });
   }
 
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addServiceBtn = document.querySelector(".worker-service");
   if (addServiceBtn) {
     addServiceBtn.addEventListener("click", function () {
-      window.location.href = "add-service.html";
+      window.location.href = "/Course-work/html/add-service.html";
     });
   }
 
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (editProfileEBtn.length) {
     editProfileEBtn.forEach((btn) => {
       btn.addEventListener("click", function () {
-        window.location.href = "edit-profile.html";
+        window.location.href = "/Course-work/html/edit-profile.html";
       });
     });
   }

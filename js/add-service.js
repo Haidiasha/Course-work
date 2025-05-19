@@ -45,6 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Нова послуга:", serviceData);
     alert("Послугу успішно додано!");
 
-    window.location.href = "profile.html";
+    window.location.href = "/Course-work/html/profile.html";
   });
 });

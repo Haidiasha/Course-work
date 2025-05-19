@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       alert("Замовлення успішно створено!");
-      window.location.href = "profile.html";
+      window.location.href = "/Course-work/html/profile.html";
     }, 1500);
   });
 });

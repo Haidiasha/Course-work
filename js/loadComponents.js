@@ -130,7 +130,7 @@ async function loadHeader() {
       <header>
         <div class="container">
           <div class="header-content">
-            <a href="../index.html" class="logo">Help<span>&</span>Home</a>
+            <a href="/Course-work/index.html" class="logo">Help<span>&</span>Home</a>
             <nav>
               <ul>
                 <li><a href="/Course-work/index.html">Головна</a></li>

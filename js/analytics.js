@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const role = localStorage.getItem("role");
 
   if (role !== "admin") {
-    window.location.href = "/index.html";
+    window.location.href = "/Course-work/index.html";
     return;
   }
 

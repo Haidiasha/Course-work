@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("avatar", user.avatar);
 
         if (user.role === "admin") {
-          window.location.href = "/index.html";
+          window.location.href = "/Course-work/index.html";
         } else {
-          window.location.href = "/html/profile.html";
+          window.location.href = "/Course-work/html/profile.html";
         }
       } else {
         loginError.textContent = "Невірний email або пароль!";

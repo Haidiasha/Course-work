@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       alert("Документ успішно завантажено!");
 
-      window.location.href = "../html/profile.html";
+      window.location.href = "/Course-work/html/profile.html";
     }, 2000);
   });
 });

@@ -64,13 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeModal.addEventListener("click", function () {
     successModal.style.display = "none";
-    window.location.href = "profile.html";
+    window.location.href = "/Course-work/htmlprofile.html";
   });
 
   window.addEventListener("click", function (e) {
     if (e.target === successModal) {
       successModal.style.display = "none";
-      window.location.href = "profile.html";
+      window.location.href = "/Course-work/html/profile.html";
     }
   });
 });
