@@ -58,6 +58,14 @@ function showAdminBlockModal() {
   };
 }
 
+function getComponentPath(file) {
+  // если путь содержит /html/, значит мы в подпапке
+  if (window.location.pathname.includes("/html/")) {
+    return `../html/${file}`;
+  }
+  return `html/${file}`;
+}
+
 async function loadHeader() {
   const headerContainer = document.getElementById("header");
   const role = localStorage.getItem("role");
@@ -148,7 +156,7 @@ async function loadHeader() {
 }
 
 async function loadFooter() {
-  const response = await fetch("../html/footer.html");
+  const response = await fetch(getComponentPath("footer.html"));
   const html = await response.text();
   document.getElementById("footer").innerHTML = html;
 }
