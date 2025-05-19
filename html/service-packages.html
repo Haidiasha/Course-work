@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пакети послуг | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+    <link rel="stylesheet" href="../css/packages-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="packages-container">
+          <h1>Оберіть свій пакет послуг</h1>
+
+          <!-- Пакети для роботодавців -->
+          <div class="packages-section employer-packages">
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Базовий</h3>
+                <div class="price">500 грн/міс</div>
+              </div>
+              <ul class="package-features">
+                <li>До 5 активних вакансій</li>
+                <li>Базовий доступ до бази кандидатів</li>
+                <li>Стандартне розміщення вакансій</li>
+                <li>Термін дії 30 днів</li>
+              </ul>
+              <button class="btn btn-outline">Обрати пакет</button>
+            </div>
+
+            <div class="package-card premium">
+              <div class="package-header">
+                <h3>Premium</h3>
+                <div class="price">1500 грн/міс</div>
+              </div>
+              <ul class="package-features">
+                <li>Необмежена кількість вакансій</li>
+                <li>Повний доступ до бази кандидатів</li>
+                <li>Преміум-розміщення вакансій</li>
+                <li>Термін дії 30 днів</li>
+                <li>Пріоритетна підтримка</li>
+                <li>Аналітика та статистика</li>
+              </ul>
+              <button class="btn btn-primary">Обрати пакет</button>
+            </div>
+          </div>
+
+          <!-- Пакети для працівників -->
+          <div class="packages-section worker-packages">
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Базовий</h3>
+                <div class="price">200 грн/міс</div>
+              </div>
+              <ul class="package-features">
+                <li>Розміщення до 3 послуг</li>
+                <li>Базове просування профілю</li>
+                <li>Стандартний пошук замовлень</li>
+                <li>Термін дії 30 днів</li>
+              </ul>
+              <button class="btn btn-outline">Обрати пакет</button>
+            </div>
+
+            <div class="package-card premium">
+              <div class="package-header">
+                <h3>Premium</h3>
+                <div class="price">600 грн/міс</div>
+              </div>
+              <ul class="package-features">
+                <li>Необмежена кількість послуг</li>
+                <li>Преміум-просування профілю</li>
+                <li>Пріоритетний пошук замовлень</li>
+                <li>Термін дії 30 днів</li>
+                <li>Пріоритетна підтримка</li>
+                <li>Розширена статистика</li>
+              </ul>
+              <button class="btn btn-primary">Обрати пакет</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div class="modal" id="confirmModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Підтвердження покупки</h4>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="confirmMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelButton">Скасувати</button>
+          <button class="btn btn-primary" id="confirmButton">Підтвердити</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/packages.js"></script>
+    <script src="../js/chats.js"></script>
+  </body>
+</html>

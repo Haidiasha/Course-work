@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Безпека | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="main-content">
+      <div class="container">
+        <h1 class="section-title">Безпека</h1>
+        <div class="security-section">
+          <h2>Зміна пароля</h2>
+          <div class="security-info">Для підвищення безпеки вашого облікового запису рекомендуємо регулярно змінювати пароль.</div>
+          <form class="security-form">
+            <label for="current-password">Поточний пароль</label>
+            <input type="password" id="current-password" placeholder="Введіть поточний пароль" disabled />
+
+            <label for="new-password">Новий пароль</label>
+            <input type="password" id="new-password" placeholder="Введіть новий пароль" disabled />
+
+            <label for="confirm-password">Підтвердіть новий пароль</label>
+            <input type="password" id="confirm-password" placeholder="Підтвердіть новий пароль" disabled />
+
+            <button type="submit" class="btn btn-primary" disabled>Змінити пароль</button>
+          </form>
+          <div class="security-tips">
+            <strong>Поради з безпеки:</strong>
+            <ul>
+              <li>Використовуйте складний унікальний пароль для кожного сервісу.</li>
+              <li>Не передавайте пароль третім особам.</li>
+              <li>Регулярно змінюйте пароль.</li>
+              <li>Слідкуйте за підозрілою активністю у вашому профілі.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="../js/loadComponents.js"></script>
+  </body>
+</html>

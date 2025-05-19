@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Редагувати профіль | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="main-content">
+      <div class="container">
+        <form class="edit-profile-form">
+          <h2>Редагувати профіль</h2>
+          <div class="avatar-upload">
+            <img src="../img/avatar-placeholder.png" alt="Аватар" class="avatar-preview" id="avatarPreview" />
+            <div>
+              <label for="avatar">Завантажити новий аватар</label>
+              <input type="file" id="avatar" accept="image/*" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fullName">Ім'я та прізвище</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Введіть ім'я та прізвище" />
+          </div>
+          <div class="form-group">
+            <label for="city">Місто</label>
+            <input type="text" id="city" name="city" required placeholder="Наприклад: Київ" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+380..." />
+          </div>
+          <div class="form-group">
+            <label for="email">Електронна пошта</label>
+            <input type="email" id="email" name="email" required placeholder="email@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="about">Про себе</label>
+            <textarea id="about" name="about" placeholder="Коротко про себе, досвід, навички..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+        </form>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="../js/loadComponents.js"></script>
+  </body>
+</html>

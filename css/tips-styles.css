@@ -1,0 +1,92 @@
+.page-content {
+  padding: 60px 0;
+  min-height: calc(100vh - 74px - 300px);
+}
+
+.tips-categories {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.tip-category {
+  margin-bottom: 60px;
+}
+
+.category-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tip-category h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tips-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tip-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.tip-card p {
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.best-practices {
+  background-color: var(--light-bg);
+  padding: 60px 0;
+  margin-top: 40px;
+}
+
+.best-practices h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.practice-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: var(--shadow);
+}
+
+.practice-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}

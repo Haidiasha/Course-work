@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оплата | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+    <link rel="stylesheet" href="../css/payment-style.css" />
+    <link rel="stylesheet" href="../css/packages-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="payment-container">
+          <div class="payment-summary">
+            <h2>Інформація про замовлення</h2>
+            <div class="package-info">
+              <div id="packageName"></div>
+              <div id="packagePrice"></div>
+            </div>
+          </div>
+
+          <div class="payment-form">
+            <h2>Оплата</h2>
+            <form id="paymentForm">
+              <div class="payment-methods">
+                <label class="payment-method">
+                  <input type="radio" name="paymentMethod" value="card" checked />
+                  <div class="method-content">
+                    <span class="method-icon">
+                      <img src="../img/credit-card.png" alt="Банківська картка" />
+                    </span>
+                    <span class="method-name">Банківська картка</span>
+                    <span class="check-mark">✓</span>
+                  </div>
+                </label>
+                <label class="payment-method">
+                  <input type="radio" name="paymentMethod" value="gpay" />
+                  <div class="method-content">
+                    <span class="method-icon">
+                      <img src="../img/google-pay.svg" alt="Google Pay" />
+                    </span>
+                    <span class="method-name">Google Pay</span>
+                    <span class="check-mark">✓</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="card-details">
+                <div class="form-row">
+                  <div class="form-group1">
+                    <label>Ім'я на картці</label>
+                    <input type="text" id="cardName" placeholder="JOHN DOE" required />
+                  </div>
+                  <div class="form-group2">
+                    <label>Термін дії</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group1">
+                    <label>Номер картки</label>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required />
+                  </div>
+                  <div class="form-group2">
+                    <label>CVV</label>
+                    <input type="password" id="cvv" placeholder="***" maxlength="3" required />
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary payment-button">Оплатити <span id="paymentAmount"></span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Успішна оплата</h4>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="success-icon">✓</div>
+          <p>Дякуємо за оплату! Ваш пакет послуг активовано.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" onclick="window.location.href='profile.html'">Перейти до профілю</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/payment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профіль користувача | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+    <link rel="stylesheet" href="../css//search-styles.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content role-employer">
+      <div class="container">
+        <div class="profile-container">
+          <div class="profile-sidebar">
+            <div class="verification-status">
+              <div class="status-icon status-verified">✓</div>
+              <div>
+                <strong>Верифікований обліковий запис</strong>
+                <div style="font-size: 12px; color: #666">Підтверджено 12.03.2025</div>
+              </div>
+            </div>
+            <div class="profile-nav">
+              <ul>
+                <li><a href="#" class="active">Особистий кабінет</a></li>
+                <li><a href="#orders">Мої замовлення</a></li>
+                <li><a href="#favorites">Обрані працівники</a></li>
+                <li><a href="../html/chats.html">Повідомлення</a></li>
+                <li><a href="../html/payments.html">Платежі</a></li>
+                <li>
+                  <a href="../html/service-packages.html"
+                    >Пакети послуг
+                    <span class="premium-badge">Premium</span>
+                  </a>
+                </li>
+                <li><a href="../html/security-profile.html">Безпека</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                К
+                <div class="upload-avatar">+</div>
+              </div>
+              <div class="profile-info">
+                <h1>Катерина Петренко<span class="user-package"></span></h1>
+                <p>Київ, Україна</p>
+                <p>На сайті з 18 лютого 2025</p>
+              </div>
+              <div class="profile-actions">
+                <button class="btn btn-outline edit">Редагувати профіль</button>
+                <button class="btn btn-primary employer-order">Створити нове замовлення</button>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Статистика</h2>
+              <div class="profile-stats">
+                <div class="stat-card">
+                  <div class="stat-value">3</div>
+                  <div class="stat-label">Активні замовлення</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Завершені замовлення</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">5</div>
+                  <div class="stat-label">Обрані працівники</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">⭐4.8</div>
+                  <div class="stat-label">Середній рейтинг</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section" id="orders">
+              <h2 class="section-titles">Активні замовлення</h2>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Домробітниця, двічі на тиждень</div>
+                    <div class="experience-period">Створено: 10.04.2025</div>
+                  </div>
+                  <p>Прибирання 2-кімнатної квартири два рази на тиждень. Включає миття підлоги, пилососення, прибирання санвузла.</p>
+                  <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                    <span><strong>Статус:</strong> Виконується</span>
+                    <a href="#" class="btn btn-outline">Деталі</a>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Няня, повний день</div>
+                    <div class="experience-period">Створено: 05.04.2025</div>
+                  </div>
+                  <p>Догляд за дитиною 3 років, 5 днів на тиждень. Включає годування, прогулянки, розвиваючі ігри.</p>
+                  <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                    <span><strong>Статус:</strong> Пошук кандидатів</span>
+                    <a href="#" class="btn btn-outline">Деталі</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section" id="favorites">
+              <h2 class="section-titles">Обрані працівники</h2>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Олена Іванова - Няня</div>
+                    <div class="experience-period">⭐4.9 (28 відгуків)</div>
+                  </div>
+                  <p>Досвід роботи з дітьми від 1 до 7 років. Педагогічна освіта, медична книжка.</p>
+                  <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                    <span><strong>Тариф:</strong> від 200 грн/год</span>
+                    <a href="#" class="btn btn-primary">Написати</a>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Марина Петрова - Домробітниця</div>
+                    <div class="experience-period">⭐4.7 (45 відгуків)</div>
+                  </div>
+                  <p>Професійне прибирання будинків та квартир. Сертифікати по роботі з різними поверхнями.</p>
+                  <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                    <span><strong>Тариф:</strong> від 250 грн/год</span>
+                    <a href="#" class="btn btn-primary">Написати</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Історія замовлень</h2>
+              <div class="tabs">
+                <div class="tab active">Усі замовлення</div>
+                <div class="tab">Завершені</div>
+                <div class="tab">Відмінені</div>
+              </div>
+              <div class="tab-content active">
+                <div class="experience-list">
+                  <div class="experience-item">
+                    <div class="experience-header">
+                      <div class="experience-company">Доглядальниця для мами</div>
+                      <div class="experience-period">15.02.2025 - 15.03.2025</div>
+                    </div>
+                    <p>Догляд за літньою людиною після операції. Контроль прийому ліків, допомога з гігієною.</p>
+                    <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                      <span><strong>Виконавець:</strong> Надія К.</span>
+                      <div>
+                        <span>⭐5.0</span>
+                        <a href="#" class="btn btn-outline">Деталі</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience-item">
+                    <div class="experience-header">
+                      <div class="experience-company">Кухар на свято</div>
+                      <div class="experience-period">05.03.2025</div>
+                    </div>
+                    <p>Приготування святкової вечері для сімейного заходу на 8 осіб.</p>
+                    <div style="display: flex; justify-content: space-between; margin-top: 10px">
+                      <span><strong>Виконавець:</strong> Михайло П.</span>
+                      <div>
+                        <span>⭐4.8</span>
+                        <a href="#" class="btn btn-outline">Деталі</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content role-worker" style="display: none">
+      <div class="container">
+        <div class="profile-container">
+          <div class="profile-sidebar">
+            <div class="verification-status">
+              <div class="status-icon status-verified">✓</div>
+              <div>
+                <strong>Верифікований працівник</strong>
+                <div style="font-size: 12px; color: #666">Підтверджено 05.03.2025</div>
+              </div>
+            </div>
+            <div class="rating-overview">
+              <div class="rating-avg">4.9</div>
+              <div>
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-count">36 відгуків</div>
+              </div>
+            </div>
+            <div class="profile-nav">
+              <ul>
+                <li><a href="#" class="active">Особистий кабінет</a></li>
+                <li><a href="#my-services">Мої послуги</a></li>
+                <li><a href="#my-schedule">Мій розклад</a></li>
+                <li><a href="../html/chats.html">Повідомлення</a></li>
+                <li><a href="../html/income.html">Мої доходи</a></li>
+                <li>
+                  <a href="../html/service-packages.html"
+                    >Пакети послуг
+                    <span class="premium-badge">Premium</span>
+                  </a>
+                </li>
+                <li><a href="security-profile.html">Безпека</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                М
+                <div class="upload-avatar">+</div>
+              </div>
+              <div class="profile-info">
+                <h1>
+                  Михайло Коваленко
+                  <span class="user-package"></span>
+                </h1>
+                <p>Київ, Україна</p>
+                <p>На сайті з 2 січня 2025</p>
+                <div class="skills-list">
+                  <div class="skill-tag">Няня</div>
+                  <div class="skill-tag">Репетитор</div>
+                  <div class="skill-tag">Догляд за тваринами</div>
+                </div>
+              </div>
+              <div class="profile-actions">
+                <button class="btn btn-outline edit">Редагувати профіль</button>
+                <button class="btn btn-primary worker-service">Додати нову послугу</button>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Статистика</h2>
+              <div class="profile-stats">
+                <div class="stat-card">
+                  <div class="stat-value">4</div>
+                  <div class="stat-label">Активні замовлення</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">25</div>
+                  <div class="stat-label">Виконані замовлення</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">98%</div>
+                  <div class="stat-label">Рівень схвалення</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">10k</div>
+                  <div class="stat-label">Заробіток за місяць</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Про мене</h2>
+              <p>Я — досвідчений нянь та репетитор з педагогічною освітою. Маю 7 років досвіду роботи з дітьми різного віку. Допомагаю з навчанням, організовую розвиваючі ігри та проводжу час з користю для дітей.</p>
+              <p>Також маю великий досвід догляду за домашніми тваринами. Можу доглядати за вашими улюбленцями під час вашої відсутності.</p>
+              <p>Працюю як у будні, так і у вихідні дні. Можу надавати послуги як на постійній основі, так і разово.</p>
+            </div>
+
+            <div class="profile-section" id="my-services">
+              <h2 class="section-titles">Мої послуги та тарифи</h2>
+              <div class="results-grid">
+                <div class="result-card">
+                  <div class="card-image">
+                    <img src="/api/placeholder/300/200" alt="Михайло К." />
+                    <div class="card-badge">Перевірено</div>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Михайло К.</h3>
+                    <p class="card-subtitle">Няня, 30 років</p>
+                    <div class="card-rating">
+                      <div class="stars">★★★★★</div>
+                      <div class="count">(12 відгуків)</div>
+                    </div>
+                    <div class="card-details">
+                      <div class="card-detail"><i>⌛</i> 5 років досвіду</div>
+                      <div class="card-detail"><i>📍</i> Київ</div>
+                      <div class="card-detail"><i>🕒</i> Повний день</div>
+                    </div>
+                    <div class="card-price">350 грн/год</div>
+                    <div class="card-actions">
+                      <button class="btn btn-outline">Редагувати</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="result-card">
+                  <div class="card-image">
+                    <img src="/api/placeholder/300/200" alt="Михайло К." />
+                    <div class="card-badge">Перевірено</div>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Михайло К.</h3>
+                    <p class="card-subtitle">Репетитор, 30 років</p>
+                    <div class="card-rating">
+                      <div class="stars">★★★★☆</div>
+                      <div class="count">(8 відгуків)</div>
+                    </div>
+                    <div class="card-details">
+                      <div class="card-detail"><i>⌛</i> 3 роки досвіду</div>
+                      <div class="card-detail"><i>📍</i> Київ</div>
+                      <div class="card-detail"><i>🕒</i> Гнучкий графік</div>
+                    </div>
+                    <div class="card-price">300 грн/год</div>
+                    <div class="card-actions">
+                      <button class="btn btn-outline">Редагувати</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="result-card">
+                  <div class="card-image">
+                    <img src="/api/placeholder/300/200" alt="Михайло К." />
+                    <div class="card-badge">Перевірено</div>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Михайло К.</h3>
+                    <p class="card-subtitle">Догляд за тваринами, 30 років</p>
+                    <div class="card-rating">
+                      <div class="stars">★★★★★</div>
+                      <div class="count">(15 відгуків)</div>
+                    </div>
+                    <div class="card-details">
+                      <div class="card-detail"><i>⌛</i> 4 роки досвіду</div>
+                      <div class="card-detail"><i>📍</i> Київ</div>
+                      <div class="card-detail"><i>🕒</i> Повний день</div>
+                    </div>
+                    <div class="card-price">150 грн/год</div>
+                    <div class="card-actions">
+                      <button class="btn btn-outline">Редагувати</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Освіта та досвід</h2>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Київський педагогічний університет ім. Драгоманова</div>
+                    <div class="experience-period">2018 - 2022</div>
+                  </div>
+                  <p>Спеціальність: Дошкільна освіта</p>
+                  <p>Ступінь: Бакалавр</p>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Дитячий садок "Сонечко"</div>
+                    <div class="experience-period">2022 - 2024</div>
+                  </div>
+                  <p>Посада: Вихователь</p>
+                  <p>Відповідальність: Робота з дітьми віком 3-6 років, організація навчальних та розвиваючих занять.</p>
+                </div>
+              </div>
+              <a href="../html/add-education.html" class="add-button">+ Додати освіту/досвід</a>
+            </div>
+
+            <div class="profile-section" id="my-schedule">
+              <h2 class="section-titles">Мій розклад</h2>
+              <div class="calendar">
+                <div class="calendar-header">
+                  <h3 id="current-month-year">Квітень 2025</h3>
+                  <div class="calendar-nav">
+                    <button id="prev-month" class="btn btn-outline">◀</button>
+                    <button id="next-month" class="btn btn-outline">▶</button>
+                  </div>
+                </div>
+                <div id="calendar-grid" class="calendar-grid"></div>
+                <div style="margin-top: 15px; display: flex; gap: 20px; font-size: 14px">
+                  <div style="display: flex; align-items: center; gap: 5px">
+                    <div style="width: 15px; height: 15px; background-color: #e8f5e9; border-radius: 3px"></div>
+                    <span>Доступний</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 5px">
+                    <div style="width: 15px; height: 15px; background-color: #ffebee; border-radius: 3px"></div>
+                    <span>Зайнятий</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 5px">
+                    <div style="width: 15px; height: 15px; background-color: var(--light-bg); border-radius: 3px"></div>
+                    <span>Не визначено</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Відгуки клієнтів</h2>
+              <div class="review-list">
+                <div class="review-item">
+                  <div class="review-avatar">К1</div>
+                  <div class="review-content">
+                    <div class="review-header">
+                      <div>
+                        <strong>Користувач 1</strong>
+                        <div class="review-rating">★★★★★</div>
+                      </div>
+                      <div class="review-date">10.04.2025</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae ullam magni officia incidunt asperiores blanditiis quidem adipisci vel! Ex nemo veritatis pariatur rem ad itaque ipsum iusto? Magnam, dolor?</p>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <div class="review-avatar">К2</div>
+                  <div class="review-content">
+                    <div class="review-header">
+                      <div>
+                        <strong>Користувач 2</strong>
+                        <div class="review-rating">★★★★★</div>
+                      </div>
+                      <div class="review-date">02.04.2025</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae ullam magni officia incidunt asperiores blanditiis quidem adipisci vel! Ex nemo veritatis pariatur rem ad itaque ipsum iusto? Magnam, dolor?</p>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <div class="review-avatar">ВС</div>
+                  <div class="review-content">
+                    <div class="review-header">
+                      <div>
+                        <strong>Користувач 3</strong>
+                        <div class="review-rating">★★★★☆</div>
+                      </div>
+                      <div class="review-date">25.03.2025</div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae ullam magni officia incidunt asperiores blanditiis quidem adipisci vel! Ex nemo veritatis pariatur rem ad itaque ipsum iusto? Magnam, dolor?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-section">
+              <h2 class="section-titles">Сертифікати та документи</h2>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Медична книжка</div>
+                    <div class="experience-period">Дійсна до: 20.09.2025</div>
+                  </div>
+                  <p>Медичний огляд пройдено у березні 2025 року</p>
+                  <div style="display: flex; justify-content: flex-end; margin-top: 10px">
+                    <a href="#" class="btn btn-outline">Переглянути</a>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Сертифікат першої допомоги</div>
+                    <div class="experience-period">Отримано: 15.01.2025</div>
+                  </div>
+                  <p>Курс невідкладної допомоги для дітей та дорослих</p>
+                  <div style="display: flex; justify-content: flex-end; margin-top: 10px">
+                    <a href="#" class="btn btn-outline">Переглянути</a>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <div class="experience-company">Довідка про несудимість</div>
+                    <div class="experience-period">Отримано: 01.02.2025</div>
+                  </div>
+                  <p>Видана МВС України</p>
+                  <div style="display: flex; justify-content: flex-end; margin-top: 10px">
+                    <a href="#" class="btn btn-outline">Переглянути</a>
+                  </div>
+                </div>
+              </div>
+              <a href="../html/add-document.html" class="add-button">+ Додати документ або сертифікат</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

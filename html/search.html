@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук персоналу - Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+    <link rel="stylesheet" href="../css/search-styles.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Пошук домашнього персоналу</h1>
+        <p>Знайдіть ідеального працівника для вашого дому з нашими розширеними фільтрами пошуку</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="search-content">
+        <!-- Фільтри -->
+        <aside class="filters">
+          <!-- Фильтры для работодателя (role="employer") -->
+          <div class="employer-filters" style="display: none">
+            <div class="filter-section">
+              <h3 class="filter-title">Категорія послуг</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="nanny" /> Няня </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="housekeeper" /> Домробітниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="caretaker" /> Доглядальниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="cook" /> Кухар </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="driver" /> Водій </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="gardener" /> Садівник </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="home_craftman" /> Домашній майстер </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="tutor" /> Репетитор </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="watching_animals" /> Догляд за тваринами </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Графік роботи</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="full-time" /> Повний день </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="part-time" /> Неповний день </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="flexible" /> Гнучкий графік </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="live-in" /> З проживанням </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="weekend" /> Вихідні дні </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Локація</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="vinnytsia" /> Вінниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="volyn" /> Волинь </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="dnipro" /> Дніпро </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="donetsk" /> Донецьк </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zhytomyr" /> Житомир </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zakarpattia" /> Закарпаття </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zaporizhzhia" /> Запоріжжя </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="ivano-frankivsk" /> Івано-Франківськ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kyiv" /> Київ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kropyvnytskyi" /> Кропивницький </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="luhansk" /> Луганськ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="lviv" /> Львів </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="mykolaiv" /> Миколаїв </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="odesa" /> Одеса </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="poltava" /> Полтава </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="rivne" /> Рівне </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="sumy" /> Суми </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="ternopil" /> Тернопіль </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kharkiv" /> Харків </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kherson" /> Херсон </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="khmelnytskyi" /> Хмельницький </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="cherkasy" /> Черкаси </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="chernivtsi" /> Чернівці </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="chernihiv" /> Чернігів </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Рівень оплати (грн/год)</h3>
+              <div class="price-inputs">
+                <input type="number" placeholder="Від" min="0" max="1000" />
+                <input type="number" placeholder="До" min="0" max="1000" />
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Досвід роботи</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="experience" value="1" /> До 1 року </label>
+                <label class="checkbox-item"> <input type="checkbox" name="experience" value="1-3" /> 1-3 роки </label>
+                <label class="checkbox-item"> <input type="checkbox" name="experience" value="3-5" /> 3-5 років </label>
+                <label class="checkbox-item"> <input type="checkbox" name="experience" value="5+" /> Більше 5 років </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Фильтры для работника (role="worker") -->
+          <div class="worker-filters" style="display: none">
+            <div class="filter-section">
+              <h3 class="filter-title">Категорія послуг</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="nanny" /> Няня </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="housekeeper" /> Домробітниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="caretaker" /> Доглядальниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="cook" /> Кухар </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="driver" /> Водій </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="gardener" /> Садівник </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="home_craftman" /> Домашній майстер </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="tutor" /> Репетитор </label>
+                <label class="checkbox-item"> <input type="checkbox" name="category" value="watching_animals" /> Догляд за тваринами </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Тип зайнятості</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox" name="employment" value="permanent" /> Постійна робота</label>
+                <label class="checkbox-item"><input type="checkbox" name="employment" value="temporary" /> Тимчасова робота</label>
+                <label class="checkbox-item"><input type="checkbox" name="employment" value="one-time" /> Одноразова робота</label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Регулярність</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox" name="frequency" value="daily" /> Щодня</label>
+                <label class="checkbox-item"><input type="checkbox" name="frequency" value="weekly" /> Щотижня</label>
+                <label class="checkbox-item"><input type="checkbox" name="frequency" value="monthly" /> Щомісяця</label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Графік роботи</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="full-time" /> Повний день </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="part-time" /> Неповний день </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="flexible" /> Гнучкий графік </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="live-in" /> З проживанням </label>
+                <label class="checkbox-item"> <input type="checkbox" name="schedule" value="weekend" /> Вихідні дні </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Локація</h3>
+              <div class="checkbox-group">
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="vinnytsia" /> Вінниця </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="volyn" /> Волинь </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="dnipro" /> Дніпро </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="donetsk" /> Донецьк </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zhytomyr" /> Житомир </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zakarpattia" /> Закарпаття </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="zaporizhzhia" /> Запоріжжя </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="ivano-frankivsk" /> Івано-Франківськ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kyiv" /> Київ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kropyvnytskyi" /> Кропивницький </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="luhansk" /> Луганськ </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="lviv" /> Львів </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="mykolaiv" /> Миколаїв </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="odesa" /> Одеса </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="poltava" /> Полтава </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="rivne" /> Рівне </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="sumy" /> Суми </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="ternopil" /> Тернопіль </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kharkiv" /> Харків </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="kherson" /> Херсон </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="khmelnytskyi" /> Хмельницький </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="cherkasy" /> Черкаси </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="chernivtsi" /> Чернівці </label>
+                <label class="checkbox-item"> <input type="checkbox" name="location" value="chernihiv" /> Чернігів </label>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3 class="filter-title">Рівень оплати (грн/год)</h3>
+              <div class="price-inputs">
+                <input type="number" placeholder="Від" min="0" max="1000" />
+                <input type="number" placeholder="До" min="0" max="1000" />
+              </div>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <a href="#" class="clear-filters">Очистити всі фільтри</a>
+          </div>
+        </aside>
+
+        <div class="search-results">
+          <div class="search-top">
+            <div class="search-summary"></div>
+            <div class="search-controls">
+              <div class="search-sort">
+                <label for="sort-select">Сортувати за:</label>
+                <select id="sort-select">
+                  <option value="relevance">Релевантністю</option>
+                  <option value="rating">Рейтингом</option>
+                  <option value="price-low">Ціною (від найнижчої)</option>
+                  <option value="price-high">Ціною (від найвищої)</option>
+                  <option value="experience">Досвідом</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="results-grid"></div>
+
+          <div class="pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div id="responseModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h3>Відгук надіслано!</h3>
+        <p>Ви успішно відгукнулися на замовлення</p>
+        <button class="btn btn-primary modal-close">OK</button>
+      </div>
+    </div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/search.js"></script>
+  </body>
+</html>

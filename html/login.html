@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help&Home - Вхід/Реєстрація</title>
+    <link rel="stylesheet" href="../css/login-styles.css" />
+  </head>
+  <body>
+    <!-- Шапка сайту -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="../index.html" class="logo">Help<span>&</span>Home</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Сторінка входу -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-header">
+            <h2>Вітаємо в Help&Home</h2>
+            <p>Увійдіть до свого облікового запису або створіть новий</p>
+          </div>
+          <div class="auth-tabs">
+            <div class="auth-tab active">Вхід</div>
+            <div class="auth-tab">Реєстрація</div>
+          </div>
+
+          <!-- Форма входу -->
+          <form id="login-form">
+            <div id="login-error" class="form-error" style="display: none"></div>
+            <div class="form-group" style="position: relative">
+              <label for="email">Електронна пошта</label>
+              <input type="email" id="email" class="form-control" required />
+            </div>
+            <div class="form-group" style="position: relative">
+              <label for="password">Пароль</label>
+              <input type="password" id="password" class="form-control" required />
+              <span class="toggle-password" data-target="password" style="position: absolute; top: 38px; right: 15px; cursor: pointer">
+                <svg class="eye-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M1 12C3 7 8 3 12 3s9 4 11 9c-2 5-7 9-11 9S3 17 1 12z" stroke="#333" stroke-width="2" fill="none" />
+                  <path d="M4 4l16 16" stroke="#333" stroke-width="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Запам'ятати мене</label>
+            </div>
+            <button type="submit" class="btn">Увійти</button>
+            <div class="auth-footer">
+              <a href="#">Забули пароль?</a>
+            </div>
+
+            <div class="social-login">
+              <p><span>Або увійдіть через</span></p>
+              <div class="social-buttons">
+                <a href="#" class="social-btn">
+                  <img src="../img/icon-google.svg" alt="Google" />
+                </a>
+                <a href="#" class="social-btn">
+                  <img src="../img/icon-facebook.svg" alt="Facebook" />
+                </a>
+                <a href="#" class="social-btn">
+                  <img src="../img/icon-telegram.svg" alt="Telegram" />
+                </a>
+                <a href="#" class="social-btn">
+                  <img src="../img/icon-apple.svg" alt="Apple" />
+                </a>
+              </div>
+            </div>
+          </form>
+
+          <!-- Форма реєстрації -->
+          <form id="register-form" style="display: none">
+            <div class="role-selector">
+              <div class="role-option selected">
+                <img src="../img/employee.svg" alt="Роботодавець" />
+                <h3>Я шукаю працівника</h3>
+                <p>Публікуйте вакансії та знаходьте надійний персонал</p>
+              </div>
+              <div class="role-option">
+                <img src="../img/worker.svg" alt="Працівник" />
+                <h3>Я шукаю роботу</h3>
+                <p>Створіть профіль і знаходьте цікаві пропозиції</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-name">Ім'я та прізвище</label>
+              <input type="text" id="reg-name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="reg-email">Електронна пошта</label>
+              <input type="email" id="reg-email" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="reg-phone">Номер телефону</label>
+              <input type="tel" id="reg-phone" class="form-control" required />
+            </div>
+            <div class="form-group" style="position: relative">
+              <label for="reg-password">Пароль</label>
+              <input type="password" id="reg-password" class="form-control" required />
+              <span class="toggle-password" data-target="reg-password" style="position: absolute; top: 38px; right: 15px; cursor: pointer">
+                <svg class="eye-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M1 12C3 7 8 3 12 3s9 4 11 9c-2 5-7 9-11 9S3 17 1 12z" stroke="#333" stroke-width="2" fill="none" />
+                  <path d="M4 4l16 16" stroke="#333" stroke-width="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="form-group" style="position: relative">
+              <label for="reg-confirm-password">Підтвердження пароля</label>
+              <input type="password" id="reg-confirm-password" class="form-control" required />
+              <span class="toggle-password" data-target="reg-confirm-password" style="position: absolute; top: 38px; right: 15px; cursor: pointer">
+                <svg class="eye-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M1 12C3 7 8 3 12 3s9 4 11 9c-2 5-7 9-11 9S3 17 1 12z" stroke="#333" stroke-width="2" fill="none" />
+                  <path d="M4 4l16 16" stroke="#333" stroke-width="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="terms" required />
+              <label for="terms">Я погоджуюсь з <a href="#">умовами використання</a> та <a href="#">політикою конфіденційності</a></label>
+            </div>
+            <button type="submit" class="btn">Зареєструватися</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="customAlert" class="custom-alert">
+      <div class="alert-content">
+        <div class="alert-message"></div>
+        <button class="alert-button">OK</button>
+      </div>
+    </div>
+
+    <!-- Підвал -->
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          <p>&copy; 2025 Help&Home. Всі права захищені.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

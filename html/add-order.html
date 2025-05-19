@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Створити замовлення | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="form-container">
+          <h1>Створити нове замовлення</h1>
+          <form id="addOrderForm" class="service-form">
+            <div class="form-group">
+              <label for="orderTitle"><strong>Назва замовлення</strong></label>
+              <input type="text" id="orderTitle" required placeholder="Наприклад: Потрібна няня для дитини" />
+            </div>
+
+            <div class="form-groups">
+              <label for="orderCategory"><strong>Категорія послуг</strong></label>
+              <select id="orderCategory" required>
+                <option value="">Оберіть категорію послуги</option>
+                <option value="nanny">Няня</option>
+                <option value="housekeeper">Домробітниця</option>
+                <option value="caretaker">Доглядальниця</option>
+                <option value="cook">Кухар</option>
+                <option value="driver">Водій</option>
+                <option value="gardener">Садівник</option>
+                <option value="tutor">Репетитор</option>
+                <option value="watching_animals">Догляд за тваринами</option>
+              </select>
+            </div>
+
+            <div class="form-groups">
+              <label for="orderDescription"><strong>Опис замовлення</strong></label>
+              <textarea id="orderDescription" rows="4" required placeholder="Опишіть деталі завдання, вимоги та умови роботи"></textarea>
+            </div>
+
+            <div class="form-groups">
+              <label for="orderSchedule"><strong>Графік роботи</strong></label>
+              <select id="orderSchedule" required>
+                <option value="">Оберіть графік</option>
+                <option value="full_time">Повний день</option>
+                <option value="part_time">Неповний день</option>
+                <option value="flexible">Гнучкий графік</option>
+                <option value="live-in">З проживанням</option>
+                <option value="weekend">Вихідні дні</option>
+              </select>
+            </div>
+
+            <div class="form-groups">
+              <label><strong>Тип зайнятості</strong></label>
+              <select id="employmentType" required>
+                <option value="">Оберіть тип зайнятості</option>
+                <option value="permanent">Постійна робота</option>
+                <option value="temporary">Тимчасова робота</option>
+                <option value="one-time">Одноразова робота</option>
+              </select>
+            </div>
+
+            <div class="form-groups">
+              <label><strong>Регулярність</strong></label>
+              <select id="frequency" required>
+                <option value="">Оберіть регулярність</option>
+                <option value="daily">Щодня</option>
+                <option value="weekly">Щотижня</option>
+                <option value="monthly">Щомісяця</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="orderBudget"><strong>Бюджет (грн/год)</strong></label>
+              <input type="number" id="orderBudget" required min="0" step="10" />
+            </div>
+
+            <div class="form-groups">
+              <label><strong>Терміновість</strong></label>
+              <div class="checkbox-group">
+                <label><input type="radio" name="urgency" value="asap" /> Терміново</label>
+                <label><input type="radio" name="urgency" value="planned" /> Планово</label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" onclick="history.back()">Скасувати</button>
+              <button type="submit" class="btn btn-primary">Створити замовлення</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/add-order.js"></script>
+  </body>
+</html>

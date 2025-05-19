@@ -1,0 +1,197 @@
+.packages-container {
+  padding: 40px 0;
+}
+
+.packages-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.packages-section {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card.premium {
+  border: 2px solid #ffd700;
+  position: relative;
+}
+
+.package-card.premium::before {
+  content: "Рекомендовано";
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.package-header h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.package-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 25px;
+}
+
+.package-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.package-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.btn.active-package {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  color: white;
+  cursor: default;
+}
+
+.btn.active-package:hover {
+  background-color: var(--success-color);
+  transform: none;
+}
+
+.btn.upgrade-package {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.btn.upgrade-package:hover {
+  background-color: var(--accent-color);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: var(--border-color);
+  border-color: var(--border-color);
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  transform: none;
+}
+
+.package-card.has-active {
+  border: 2px solid var(--success-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 0;
+  width: 90%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h4 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+#successModal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+}
+
+.modal-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

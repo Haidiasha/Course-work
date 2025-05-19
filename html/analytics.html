@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аналітика | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/analytics-styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="analytics-container">
+          <div class="analytics-header">
+            <h1>Панель адміністратора</h1>
+            <p>Аналітика та статистика платформи</p>
+          </div>
+
+          <!-- Добавляем фильтры -->
+          <div class="analytics-filters">
+            <div class="filter-group">
+              <label>Період:</label>
+              <select id="period-select">
+                <option value="week">За тиждень</option>
+                <option value="month" selected>За місяць</option>
+                <option value="quarter">За квартал</option>
+                <option value="year">За рік</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label>Тип даних:</label>
+              <select id="data-type-select">
+                <option value="general" selected>Загальна статистика</option>
+                <option value="financial">Фінансові показники</option>
+                <option value="activity">Активність користувачів</option>
+              </select>
+            </div>
+
+            <button id="update-stats" class="btn btn-primary">Оновити дані</button>
+            <button id="export-report" class="btn btn-outline" style="margin-left: 10px">Експортувати звіт</button>
+          </div>
+          <div id="analytics-report">
+            <div class="stats-grid">
+              <!-- Загальна статистика -->
+              <div class="stats-section">
+                <h2>Загальна статистика</h2>
+                <div class="stats-cards">
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Користувачів</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Активних замовлень</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Виконаних замовлень</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Фінансова статистика -->
+              <div class="stats-section">
+                в
+                <h2>Фінансові показники</h2>
+                <div class="stats-cards">
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label" id="revenue-label">Місячний оборот</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Комісія платформи</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Активність користувачів -->
+              <div class="stats-section">
+                <h2>Активність</h2>
+                <div class="stats-cards">
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Успішних угод</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value"></div>
+                    <div class="stat-label">Середній рейтинг</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/analytics.js"></script>
+  </body>
+</html>

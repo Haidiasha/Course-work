@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Додати нову послугу | Help&Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="form-container">
+          <h1>Додати нову послугу</h1>
+          <form id="addServiceForm" class="service-form">
+            <div class="form-groups">
+              <label for="serviceTitle"><strong>Категорія послуг</strong></label>
+              <select id="category-select">
+                <option value="nanny">Оберіть категорію послуги</option>
+                <option value="nanny">Няня</option>
+                <option value="housekeeper">Домробітниця</option>
+                <option value="caretaker">Доглядальниця</option>
+                <option value="cook">Кухар</option>
+                <option value="driver">Водій</option>
+                <option value="gardener">Садівник</option>
+                <option value="tutor">Репетитор</option>
+                <option value="watching_animals">Догляд за тваринами</option>
+              </select>
+            </div>
+
+            <div class="form-groups">
+              <label for="serviceSubtitle"><strong>Короткий опис</strong></label>
+              <input type="text" id="serviceSubtitle" required placeholder="Наприклад: Послуги няні" />
+            </div>
+
+            <div class="form-groups">
+              <label for="experienceYears"><strong>Досвід роботи (років)</strong></label>
+              <input type="number" id="experienceYears" required min="0" />
+            </div>
+
+            <div class="form-groups">
+              <label for="location"><strong>Район міста</strong></label>
+              <input type="text" id="location" required placeholder="Наприклад: Київ, Оболонь" />
+            </div>
+
+            <div class="form-groups">
+              <label for="orderSchedule"><strong>Графік роботи</strong></label>
+              <select id="orderSchedule" required>
+                <option value="">Оберіть графік</option>
+                <option value="full_time">Повний день</option>
+                <option value="part_time">Неповний день</option>
+                <option value="flexible">Гнучкий графік</option>
+                <option value="live-in">З проживанням</option>
+                <option value="weekend">Вихідні дні</option>
+              </select>
+            </div>
+
+            <div class="form-groups">
+              <label for="servicePrice"><strong>Вартість (грн/год)</strong></label>
+              <input type="number" id="servicePrice" required min="0" step="10" />
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" onclick="history.back()">Скасувати</button>
+              <button type="submit" class="btn btn-primary">Додати послугу</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/add-service.js"></script>
+  </body>
+</html>
