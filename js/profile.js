@@ -207,22 +207,44 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-});
 
-// --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
-document.getElementById("avatar").addEventListener("change", function (e) {
-  const file = e.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (ev) {
-      document.getElementById("avatarPreview").src = ev.target.result;
-    };
-    reader.readAsDataURL(file);
+  // Получаем email текущего пользователя
+  const email = localStorage.getItem("name") && localStorage.getItem("role") ? Object.keys(localStorage).find((key) => key.startsWith("profile_") && JSON.parse(localStorage.getItem(key)).name === localStorage.getItem("name")) : null;
+
+  let profile = null;
+  if (email) {
+    profile = JSON.parse(localStorage.getItem(email));
   }
-});
 
-document.getElementById("addEducationForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Освіту/досвід додано!");
-  window.history.back();
+  // Если профиль найден, подставляем данные в DOM
+  if (profile) {
+    // Пример для имени и аватара:
+    const userName = document.querySelector(".profile-info h1");
+    if (userName) userName.childNodes[0].nodeValue = profile.name + " ";
+
+    const userAvatar = document.querySelector(".profile-avatar");
+    if (userAvatar) userAvatar.textContent = profile.avatar;
+
+    // Аналогично подставляй остальные поля профиля (город, about і т.д.)
+    const cityElem = document.querySelector(".profile-info p");
+    if (cityElem) cityElem.textContent = profile.city ? profile.city + ", Україна" : "Україна";
+  }
+
+  // --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
+  document.getElementById("avatar").addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        document.getElementById("avatarPreview").src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  document.getElementById("addEducationForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Освіту/досвід додано!");
+    window.history.back();
+  });
 });
