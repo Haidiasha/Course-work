@@ -34,11 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // --------------------------------------- Дані для перевірки (тестові) ---------------------------------------
-const users = [
-  { email: "employer@example.com", password: "employer123", role: "employer", name: "Катерина", avatar: "К" },
-  { email: "worker@example.com", password: "worker123", role: "worker", name: "Михайло", avatar: "М" },
-  { email: "admin@example.com", password: "admin123", role: "admin", name: "Адміністратор", avatar: "А" },
-];
+function getUsers() {
+  // Получаем пользователей из localStorage или используем дефолтных
+  const saved = localStorage.getItem("users");
+  if (saved) return JSON.parse(saved);
+  return [
+    { email: "employer@example.com", password: "employer123", role: "employer", name: "Катерина", avatar: "К" },
+    { email: "worker@example.com", password: "worker123", role: "worker", name: "Михайло", avatar: "М" },
+    { email: "admin@example.com", password: "admin123", role: "admin", name: "Адміністратор", avatar: "А" },
+  ];
+}
+function saveUsers(users) {
+  localStorage.setItem("users", JSON.stringify(users));
+}
 
 // --------------------------------------- Обробка форми входу ---------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
@@ -52,12 +60,27 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
+      const users = getUsers();
       const user = users.find((u) => u.email === email && u.password === password);
 
       if (user) {
         localStorage.setItem("role", user.role);
         localStorage.setItem("name", user.name);
         localStorage.setItem("avatar", user.avatar);
+
+        // Сохраняем профиль пользователя (можно расширить)
+        localStorage.setItem(
+          "profile_" + user.email,
+          JSON.stringify({
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            avatar: user.avatar,
+            city: user.city || "",
+            phone: user.phone || "",
+            about: user.about || "",
+          })
+        );
 
         if (user.role === "admin") {
           window.location.href = "/Course-work/index.html";
@@ -97,8 +120,34 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+      const users = getUsers();
+      if (users.some((u) => u.email === email)) {
+        showCustomAlert("Ця електронна пошта вже зареєстрована!");
+        return;
+      }
+
       const selectedRole = document.querySelector(".role-option.selected");
       const role = selectedRole.querySelector("h3").textContent.includes("працівника") ? "worker" : "employer";
+      const avatar = name ? name[0].toUpperCase() : "U";
+
+      // Добавляем нового користувача
+      const newUser = { email, password, role, name, avatar };
+      users.push(newUser);
+      saveUsers(users);
+
+      // Создаем базовый профиль
+      localStorage.setItem(
+        "profile_" + email,
+        JSON.stringify({
+          name,
+          email,
+          role,
+          avatar,
+          city: "",
+          phone: "",
+          about: "",
+        })
+      );
 
       showCustomAlert("Реєстрація пройшла успішно! Тепер ви можете увійти використовуючи свій email та пароль.");
 
