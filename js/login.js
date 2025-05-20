@@ -39,8 +39,9 @@ function getUsers() {
   const saved = localStorage.getItem("users");
   if (saved) return JSON.parse(saved);
   return [
-    { email: "employer@example.com", password: "employer123", role: "employer", name: "Катерина", avatar: "К" },
-    { email: "worker@example.com", password: "worker123", role: "worker", name: "Михайло", avatar: "М" },
+    // Тестовые аккаунты с шаблонными профилями
+    { email: "employer@example.com", password: "employer123", role: "employer", name: "Катерина", avatar: "К", city: "Київ", phone: "+380501234567", about: "Професійний роботодавець" },
+    { email: "worker@example.com", password: "worker123", role: "worker", name: "Михайло", avatar: "М", city: "Київ", phone: "+380501234568", about: "Досвідчений працівник" },
     { email: "admin@example.com", password: "admin123", role: "admin", name: "Адміністратор", avatar: "А" },
   ];
 }
@@ -68,19 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("name", user.name);
         localStorage.setItem("avatar", user.avatar);
 
-        // Сохраняем профиль пользователя (можно расширить)
-        localStorage.setItem(
-          "profile_" + user.email,
-          JSON.stringify({
-            name: user.name,
-            email: user.email,
-            role: user.role,
-            avatar: user.avatar,
-            city: user.city || "",
-            phone: user.phone || "",
-            about: user.about || "",
-          })
-        );
+        // Только для новых пользователей создаём профиль, для тестовых — не трогаем!
+        if (email !== "employer@example.com" && email !== "worker@example.com" && email !== "admin@example.com") {
+          localStorage.setItem(
+            "profile_" + user.email,
+            JSON.stringify({
+              name: user.name,
+              email: user.email,
+              role: user.role,
+              avatar: user.avatar,
+              city: user.city || "",
+              phone: user.phone || "",
+              about: user.about || "",
+            })
+          );
+        }
 
         if (user.role === "admin") {
           window.location.href = "/Course-work/index.html";
@@ -135,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       users.push(newUser);
       saveUsers(users);
 
-      // Создаем базовый профиль
+      // Создаем чистый профиль для нового пользователя
       localStorage.setItem(
         "profile_" + email,
         JSON.stringify({
