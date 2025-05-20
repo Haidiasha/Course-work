@@ -42,14 +42,18 @@
 
           <div class="profile-content">
             <div class="profile-header">
-              <div class="profile-avatar">
-                К
+              <div class="profile-avatar" id="profileAvatar">
+                <!-- Буква или картинка аватара будет подставляться JS -->
                 <div class="upload-avatar">+</div>
               </div>
               <div class="profile-info">
-                <h1>Катерина Петренко<span class="user-package"></span></h1>
-                <p>Київ, Україна</p>
-                <p>На сайті з 18 лютого 2025</p>
+                <h1>
+                  <span id="profileName"></span>
+                  <span class="user-package"></span>
+                </h1>
+                <p id="profileCity"></p>
+                <p id="profileSince"></p>
+                <div class="skills-list" id="profileSkills"></div>
               </div>
               <div class="profile-actions">
                 <button class="btn btn-outline edit">Редагувати профіль</button>
@@ -218,22 +222,18 @@
 
           <div class="profile-content">
             <div class="profile-header">
-              <div class="profile-avatar">
-                М
+              <div class="profile-avatar" id="profileAvatar">
+                <!-- Буква или картинка аватара будет подставляться JS -->
                 <div class="upload-avatar">+</div>
               </div>
               <div class="profile-info">
                 <h1>
-                  Михайло Коваленко
+                  <span id="profileName"></span>
                   <span class="user-package"></span>
                 </h1>
-                <p>Київ, Україна</p>
-                <p>На сайті з 2 січня 2025</p>
-                <div class="skills-list">
-                  <div class="skill-tag">Няня</div>
-                  <div class="skill-tag">Репетитор</div>
-                  <div class="skill-tag">Догляд за тваринами</div>
-                </div>
+                <p id="profileCity"></p>
+                <p id="profileSince"></p>
+                <div class="skills-list" id="profileSkills"></div>
               </div>
               <div class="profile-actions">
                 <button class="btn btn-outline edit">Редагувати профіль</button>
@@ -437,7 +437,7 @@
                       </div>
                       <div class="review-date">25.03.2025</div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae ullam magni officia incidunt asperiores blanditiis quidem adipisci vel! Ex nemo veritatis pariatur rem ad itaque ipsum iusto? Magnam, dolor?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae ullam magni officia incidunt asperiores blanditiis quidem adipisci vel! Ex nemo veritatis pariatur rem ad itaque ipsum iusto? Magnам, dolor?</p>
                   </div>
                 </div>
               </div>
