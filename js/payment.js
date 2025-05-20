@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   cardNumber.addEventListener("blur", function () {
-    // Удаляем все нецифровые символы
     const digits = cardNumber.value.replace(/\D/g, "");
     if (digits.length < 16) {
       cardNumber.setCustomValidity("Номер картки має містити 16 цифр");
