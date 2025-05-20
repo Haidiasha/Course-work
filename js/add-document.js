@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
       documents.push(documentData);
       localStorage.setItem("documents", JSON.stringify(documents));
 
-      alert("Документ успішно завантажено!");
-
-      window.location.href = "/Course-work/html/profile.html";
+      showCustomAlert("Документ успішно завантажено!", function () {
+        window.location.href = "/Course-work/html/profile.html";
+      });
     }, 2000);
   });
 });

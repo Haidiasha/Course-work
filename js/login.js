@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const confirmPassword = document.getElementById("reg-confirm-password").value;
 
       if (password !== confirmPassword) {
-        alert("Паролі не співпадають!");
+        showCustomAlert("Паролі не співпадають!");
         return;
       }
 

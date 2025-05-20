@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.textContent = "Створення...";
 
     setTimeout(() => {
-      alert("Замовлення успішно створено!");
-      window.location.href = "/Course-work/html/profile.html";
+      showCustomAlert("Замовлення успішно створено!", function () {
+        window.location.href = "/Course-work/html/profile.html";
+      });
     }, 1500);
   });
 });
