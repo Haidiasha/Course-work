@@ -209,23 +209,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Получаем email текущего пользователя
-  const email = localStorage.getItem("name") && localStorage.getItem("role") ? Object.keys(localStorage).find((key) => key.startsWith("profile_") && JSON.parse(localStorage.getItem(key)).name === localStorage.getItem("name")) : null;
-
+  const email = localStorage.getItem("email");
   let profile = null;
-  if (email) {
-    profile = JSON.parse(localStorage.getItem(email));
+  if (email && localStorage.getItem("profile_" + email)) {
+    profile = JSON.parse(localStorage.getItem("profile_" + email));
   }
 
   // Если профиль найден, подставляем данные в DOM
   if (profile) {
-    // Пример для имени и аватара:
     const userName = document.querySelector(".profile-info h1");
     if (userName) userName.childNodes[0].nodeValue = profile.name + " ";
 
     const userAvatar = document.querySelector(".profile-avatar");
     if (userAvatar) userAvatar.textContent = profile.avatar;
 
-    // Аналогично подставляй остальные поля профиля (город, about і т.д.)
     const cityElem = document.querySelector(".profile-info p");
     if (cityElem) cityElem.textContent = profile.city ? profile.city + ", Україна" : "Україна";
   }

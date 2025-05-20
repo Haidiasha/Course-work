@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("role", user.role);
         localStorage.setItem("name", user.name);
         localStorage.setItem("avatar", user.avatar);
+        localStorage.setItem("email", user.email); // <--- добавь эту строку
 
         // Только для новых пользователей создаём профиль, для тестовых — не трогаем!
         if (email !== "employer@example.com" && email !== "worker@example.com" && email !== "admin@example.com") {
