@@ -207,41 +207,22 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+});
 
-  // Получаем email текущего пользователя
-  const email = localStorage.getItem("email");
-  let profile = null;
-  if (email && localStorage.getItem("profile_" + email)) {
-    profile = JSON.parse(localStorage.getItem("profile_" + email));
+// --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
+document.getElementById("avatar").addEventListener("change", function (e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+      document.getElementById("avatarPreview").src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
   }
+});
 
-  // Если профиль найден, подставляем данные в DOM
-  if (profile) {
-    const userName = document.querySelector(".profile-info h1");
-    if (userName) userName.childNodes[0].nodeValue = profile.name + " ";
-
-    const userAvatar = document.querySelector(".profile-avatar");
-    if (userAvatar) userAvatar.textContent = profile.avatar;
-
-    const cityElem = document.querySelector(".profile-info p");
-    if (cityElem) cityElem.textContent = profile.city ? profile.city + ", Україна" : "Україна";
-  }
-
-  // --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
-  document.getElementById("avatar").addEventListener("change", function (e) {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (ev) {
-        document.getElementById("avatarPreview").src = ev.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-
-  document.getElementById("addEducationForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Освіту/досвід додано!");
-    window.history.back();
-  });
+document.getElementById("addEducationForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Освіту/досвід додано!");
+  window.history.back();
 });
