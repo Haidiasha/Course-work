@@ -13,6 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     e.target.value = value;
   });
 
+  cardNumber.addEventListener("blur", function () {
+    // Удаляем все нецифровые символы
+    const digits = cardNumber.value.replace(/\D/g, "");
+    if (digits.length < 16) {
+      cardNumber.setCustomValidity("Номер картки має містити 16 цифр");
+    } else {
+      cardNumber.setCustomValidity("");
+    }
+  });
+
   const expiry = document.getElementById("expiry");
   expiry.addEventListener("input", function (e) {
     let value = e.target.value.replace(/\D/g, "");
