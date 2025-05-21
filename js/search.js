@@ -327,10 +327,12 @@ document.addEventListener("DOMContentLoaded", function () {
         el.selectedIndex = 0;
       });
 
-      // Якщо потрібно, викликайте функцію оновлення результатів
-      if (typeof updateResults === "function") {
-        updateResults();
-      }
+      // Сброс страницы на первую
+      currentPage = 1;
+
+      // Обновить результати пошуку
+      displaySearchResults();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
