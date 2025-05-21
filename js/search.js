@@ -306,6 +306,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Очищення всіх фільтрів
+  const clearFiltersBtn = document.querySelector(".clear-filters");
+  if (clearFiltersBtn) {
+    clearFiltersBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Знімаємо всі чекбокси
+      document.querySelectorAll('.filters input[type="checkbox"]').forEach((el) => {
+        el.checked = false;
+      });
+
+      // Очищаємо всі поля з ціною
+      document.querySelectorAll('.filters .price-inputs input[type="number"]').forEach((el) => {
+        el.value = "";
+      });
+
+      // Якщо є select, скидаємо їх (опціонально)
+      document.querySelectorAll(".filters select").forEach((el) => {
+        el.selectedIndex = 0;
+      });
+
+      // Якщо потрібно, викликайте функцію оновлення результатів
+      if (typeof updateResults === "function") {
+        updateResults();
+      }
+    });
+  }
+
   displaySearchResults();
 
   function updatePageTitle() {
