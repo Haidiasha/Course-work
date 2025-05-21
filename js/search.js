@@ -306,31 +306,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Очищення всіх фільтрів
   const clearFiltersBtn = document.querySelector(".clear-filters");
   if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Знімаємо всі чекбокси
       document.querySelectorAll('.filters input[type="checkbox"]').forEach((el) => {
         el.checked = false;
       });
 
-      // Очищаємо всі поля з ціною
       document.querySelectorAll('.filters .price-inputs input[type="number"]').forEach((el) => {
         el.value = "";
       });
 
-      // Якщо є select, скидаємо їх (опціонально)
       document.querySelectorAll(".filters select").forEach((el) => {
         el.selectedIndex = 0;
       });
 
-      // Сброс страницы на первую
+      document.querySelectorAll(".filters input, .filters select").forEach((el) => {
+        el.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+
       currentPage = 1;
 
-      // Обновить результати пошуку
       displaySearchResults();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
