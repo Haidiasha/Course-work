@@ -400,6 +400,7 @@
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle;
+  border-radius: 50%;
 }
 
 .status-verified {
