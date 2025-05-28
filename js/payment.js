@@ -82,4 +82,44 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "/Course-work/html/profile.html";
     }
   });
+
+  const cardName = document.getElementById("cardName");
+  cardName.addEventListener("input", function (e) {
+    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+  });
+
+  cardName.addEventListener("blur", function () {
+    const value = cardName.value.trim();
+    if (!/^[A-Za-z\s]+$/.test(value) || value.length < 2) {
+      cardName.setCustomValidity("Ім'я на картці має містити лише латинські літери та бути не коротше 2 символів");
+    } else {
+      cardName.setCustomValidity("");
+    }
+  });
+
+  function isValidLuhn(cardNum) {
+    let sum = 0;
+    let shouldDouble = false;
+    for (let i = cardNum.length - 1; i >= 0; i--) {
+      let digit = parseInt(cardNum[i], 10);
+      if (shouldDouble) {
+        digit *= 2;
+        if (digit > 9) digit -= 9;
+      }
+      sum += digit;
+      shouldDouble = !shouldDouble;
+    }
+    return sum % 10 === 0;
+  }
+
+  cardNumber.addEventListener("blur", function () {
+    const digits = cardNumber.value.replace(/\D/g, "");
+    if (digits.length < 16) {
+      cardNumber.setCustomValidity("Номер картки має містити 16 цифр");
+    } else if (!isValidLuhn(digits)) {
+      cardNumber.setCustomValidity("Номер картки некоректний (невірна контрольна сума)");
+    } else {
+      cardNumber.setCustomValidity("");
+    }
+  });
 });
