@@ -166,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const userPackage = localStorage.getItem("userPackage");
   const packageSpan = document.querySelectorAll(".user-package");
-  console.log(packageSpan);
 
   if (packageSpan) {
     packageSpan.forEach((aboba) => {
@@ -210,16 +209,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
-document.getElementById("avatar").addEventListener("change", function (e) {
-  const file = e.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (ev) {
-      document.getElementById("avatarPreview").src = ev.target.result;
-    };
-    reader.readAsDataURL(file);
-  }
-});
+const avatarInput = document.getElementById("avatar");
+if (avatarInput) {
+  avatarInput.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        document.getElementById("avatarPreview").src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+}
 
 document.getElementById("addEducationForm").addEventListener("submit", function (e) {
   e.preventDefault();
