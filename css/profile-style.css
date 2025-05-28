@@ -398,10 +398,14 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  font-size: 14px; /* Збільшити, якщо треба більший символ */
-  line-height: 1; /* Важливо! */
-  padding: 0; /* Важливо! */
-  box-sizing: border-box; /* Важливо! */
+  background: #4caf50;
+  color: #fff;
+  font-size: 18px; /* Збільшено */
+  line-height: 1;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 .status-verified {
