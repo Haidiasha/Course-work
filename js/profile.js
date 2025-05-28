@@ -223,8 +223,11 @@ if (avatarInput) {
   });
 }
 
-document.getElementById("addEducationForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Освіту/досвід додано!");
-  window.history.back();
-});
+const addEducationForm = document.getElementById("addEducationForm");
+if (addEducationForm) {
+  addEducationForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Освіту/досвід додано!");
+    window.history.back();
+  });
+}
