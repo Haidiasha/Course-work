@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --------------------------------------- Профіль для нового профілю ---------------------------------------
+  // --------------------------------------- Функціонал для нового профілю ---------------------------------------
   const isDemo = localStorage.getItem("isDemo") === "true";
 
   if (!isDemo) {
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (count) count.textContent = "0 відгуків";
       if (stars) {
         stars.innerHTML = "★★★★★";
-        stars.style.color = "#ccc"; // сірий колір
+        stars.style.color = "#ccc";
       }
     });
   }
