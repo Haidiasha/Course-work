@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeModal.addEventListener("click", function () {
     successModal.style.display = "none";
-    window.location.href = "/Course-work/htmlprofile.html";
+    window.location.href = "/Course-work/html/profile.html";
   });
 
   window.addEventListener("click", function (e) {

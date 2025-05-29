@@ -155,22 +155,25 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "/Course-work/html/login.html";
   }
 
-  const userPackage = localStorage.getItem("userPackage");
-  const packageSpan = document.querySelectorAll(".user-package");
-
-  if (packageSpan) {
-    packageSpan.forEach((aboba) => {
+  function updateUserPackageBadge() {
+    const userPackage = localStorage.getItem("userPackage");
+    document.querySelectorAll(".user-package").forEach((aboba) => {
       if (userPackage == "Premium") {
         aboba.textContent = "Premium";
         aboba.classList.add("premium");
+        aboba.classList.remove("basic");
       } else if (userPackage == "Базовий") {
         aboba.textContent = "Базовий";
         aboba.classList.add("basic");
+        aboba.classList.remove("premium");
       } else {
         aboba.textContent = "";
+        aboba.classList.remove("premium", "basic");
       }
     });
   }
+
+  updateUserPackageBadge();
 
   // --------------------------------------- Функціонал для створення нового замовлення ---------------------------------------
   const createOrderBtn = document.querySelector(".employer-order");
@@ -225,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const profileName = workerBlock.querySelector(".profile-info h1");
       if (profileName) profileName.innerHTML = (localStorage.getItem("name") || "Ваше ім'я") + "<span class='user-package'></span>";
     }
+    updateUserPackageBadge();
 
     document.querySelectorAll(".profile-info p:nth-child(2)").forEach((p) => {
       p.textContent = "Місто не вказано";
