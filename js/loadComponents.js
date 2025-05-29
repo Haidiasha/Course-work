@@ -149,7 +149,12 @@ async function loadHeader() {
     const logoutButton = headerContainer.querySelector("#logout");
     logoutButton.addEventListener("click", (e) => {
       e.preventDefault();
-      localStorage.clear();
+      localStorage.removeItem("role");
+      localStorage.removeItem("name");
+      localStorage.removeItem("avatar");
+      localStorage.removeItem("createdAt");
+      localStorage.removeItem("isDemo");
+      localStorage.removeItem("userPackage");
       window.location.href = "/Course-work/index.html";
     });
   }

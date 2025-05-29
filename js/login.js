@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Скрывать ошибку при вводе
     loginForm.querySelectorAll("input").forEach((input) => {
       input.addEventListener("input", () => {
         loginError.style.display = "none";
@@ -109,8 +108,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const name = document.getElementById("reg-name").value;
       const email = document.getElementById("reg-email").value;
+      const phone = document.getElementById("reg-phone").value.trim();
       const password = document.getElementById("reg-password").value;
       const confirmPassword = document.getElementById("reg-confirm-password").value;
+
+      const phoneRegex = /^\+380\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        showCustomAlert("Введіть коректний номер телефону у форматі +380XXXXXXXXX");
+        return;
+      }
 
       if (password !== confirmPassword) {
         showCustomAlert("Паролі не співпадають!");
@@ -134,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         avatar: name[0] || "U",
         isDemo: false,
         createdAt: new Date().toISOString(),
+        phone,
       });
 
       showCustomAlert("Реєстрація пройшла успішно! Тепер ви можете увійти використовуючи свій email та пароль.");
@@ -144,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "click",
         function () {
           document.querySelector(".auth-tab:nth-child(1)").click();
+          window.scrollTo({ top: 0, behavior: "smooth" });
         },
         { once: true }
       );
