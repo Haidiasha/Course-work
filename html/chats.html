@@ -11,10 +11,10 @@
   <body>
     <header id="header"></header>
 
-    <div class="main-content">
+    <div class="main-content role-employer">
       <div class="container">
         <div class="profile-container">
-          <div class="profile-sidebar role-employer">
+          <div class="profile-sidebar">
             <div class="verification-status">
               <div class="status-icon"></div>
               <div>
@@ -40,7 +40,71 @@
             </div>
           </div>
 
-          <div class="profile-sidebar role-worker" style="display: none">
+          <div class="profile-content">
+            <div class="chat-container">
+              <div class="chat-list">
+                <div class="chat-search">
+                  <input type="text" placeholder="Пошук чату..." />
+                </div>
+                <div class="chats">
+                  <div class="chat-item active">
+                    <div class="chat-avatar">ОІ</div>
+                    <div class="chat-info">
+                      <div class="chat-header">
+                        <h4>Олена Іванова</h4>
+                        <span class="chat-time">14:30</span>
+                      </div>
+                      <p class="chat-last-message">Дякую за швидку відповідь!</p>
+                    </div>
+                  </div>
+                  <div class="chat-item">
+                    <div class="chat-avatar">МП</div>
+                    <div class="chat-info">
+                      <div class="chat-header">
+                        <h4>Марина Петрова</h4>
+                        <span class="chat-time">Вчора</span>
+                      </div>
+                      <p class="chat-last-message">Можемо обговорити деталі завтра</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-messages">
+                <div class="chat-header">
+                  <div class="chat-contact">
+                    <div class="chat-avatar">ОІ</div>
+                    <div>
+                      <h3>Олена Іванова</h3>
+                      <span class="status online">Онлайн</span>
+                    </div>
+                  </div>
+                  <div class="chat-actions">
+                    <button class="btn btn-outline">Профіль</button>
+                  </div>
+                </div>
+
+                <div class="messages-container"></div>
+
+                <div class="chat-input">
+                  <label class="attach-label" title="Прикріпити файл">
+                    <input type="file" id="chat-attach" style="display: none" />
+                    <span class="attach-emoji" style="font-size: 22px; cursor: pointer">📎</span>
+                  </label>
+                  <input type="text" id="chat-message" placeholder="Введіть повідомлення..." autocomplete="off" />
+                  <button class="btn btn-primary" id="send-message">Надіслати</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content role-worker" style="display: none">
+      <div class="container">
+        <div class="profile-container">
+          <div class="profile-sidebar">
             <div class="verification-status">
               <div class="status-icon"></div>
               <div>
@@ -73,58 +137,60 @@
             </div>
           </div>
 
-          <div class="chat-container">
-            <div class="chat-list">
-              <div class="chat-search">
-                <input type="text" placeholder="Пошук чату..." />
-              </div>
-              <div class="chats">
-                <div class="chat-item active">
-                  <div class="chat-avatar">ОІ</div>
-                  <div class="chat-info">
-                    <div class="chat-header">
-                      <h4>Олена Іванова</h4>
-                      <span class="chat-time">14:30</span>
+          <div class="profile-content">
+            <div class="chat-container">
+              <div class="chat-list">
+                <div class="chat-search">
+                  <input type="text" placeholder="Пошук чату..." />
+                </div>
+                <div class="chats">
+                  <div class="chat-item active">
+                    <div class="chat-avatar">ОІ</div>
+                    <div class="chat-info">
+                      <div class="chat-header">
+                        <h4>Олена Іванова</h4>
+                        <span class="chat-time">14:30</span>
+                      </div>
+                      <p class="chat-last-message">Дякую за швидку відповідь!</p>
                     </div>
-                    <p class="chat-last-message">Дякую за швидку відповідь!</p>
                   </div>
-                </div>
-                <div class="chat-item">
-                  <div class="chat-avatar">МП</div>
-                  <div class="chat-info">
-                    <div class="chat-header">
-                      <h4>Марина Петрова</h4>
-                      <span class="chat-time">Вчора</span>
+                  <div class="chat-item">
+                    <div class="chat-avatar">МП</div>
+                    <div class="chat-info">
+                      <div class="chat-header">
+                        <h4>Марина Петрова</h4>
+                        <span class="chat-time">Вчора</span>
+                      </div>
+                      <p class="chat-last-message">Можемо обговорити деталі завтра</p>
                     </div>
-                    <p class="chat-last-message">Можемо обговорити деталі завтра</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="chat-messages">
-              <div class="chat-header">
-                <div class="chat-contact">
-                  <div class="chat-avatar">ОІ</div>
-                  <div>
-                    <h3>Олена Іванова</h3>
-                    <span class="status online">Онлайн</span>
+              <div class="chat-messages">
+                <div class="chat-header">
+                  <div class="chat-contact">
+                    <div class="chat-avatar">ОІ</div>
+                    <div>
+                      <h3>Олена Іванова</h3>
+                      <span class="status online">Онлайн</span>
+                    </div>
+                  </div>
+                  <div class="chat-actions">
+                    <button class="btn btn-outline">Профіль</button>
                   </div>
                 </div>
-                <div class="chat-actions">
-                  <button class="btn btn-outline">Профіль</button>
+
+                <div class="messages-container"></div>
+
+                <div class="chat-input">
+                  <label class="attach-label" title="Прикріпити файл">
+                    <input type="file" id="chat-attach" style="display: none" />
+                    <span class="attach-emoji" style="font-size: 22px; cursor: pointer">📎</span>
+                  </label>
+                  <input type="text" id="chat-message" placeholder="Введіть повідомлення..." autocomplete="off" />
+                  <button class="btn btn-primary" id="send-message">Надіслати</button>
                 </div>
-              </div>
-
-              <div class="messages-container"></div>
-
-              <div class="chat-input">
-                <label class="attach-label" title="Прикріпити файл">
-                  <input type="file" id="chat-attach" style="display: none" />
-                  <span class="attach-emoji" style="font-size: 22px; cursor: pointer">📎</span>
-                </label>
-                <input type="text" id="chat-message" placeholder="Введіть повідомлення..." autocomplete="off" />
-                <button class="btn btn-primary" id="send-message">Надіслати</button>
               </div>
             </div>
           </div>
@@ -135,7 +201,6 @@
     <div id="footer"></div>
 
     <script src="/Course-work/js/loadComponents.js"></script>
-    <script src="/Course-work/js/profile.js"></script>
     <script src="/Course-work/js/chats.js"></script>
   </body>
 </html>

@@ -1,15 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const role = localStorage.getItem("role");
-
-  const employerSidebar = document.querySelector(".profile-sidebar.role-employer");
-  const workerSidebar = document.querySelector(".profile-sidebar.role-worker");
-
-  if (role === "employer") {
-    employerSidebar.style.display = "block";
-    workerSidebar.style.display = "none";
+  if (role === "worker") {
+    document.querySelector(".role-employer").style.display = "none";
+    document.querySelector(".role-worker").style.display = "block";
   } else {
-    employerSidebar.style.display = "none";
-    workerSidebar.style.display = "block";
+    document.querySelector(".role-employer").style.display = "block";
+    document.querySelector(".role-worker").style.display = "none";
   }
 
   const currentUser = localStorage.getItem("name") || "Ви";
@@ -143,4 +139,32 @@ document.addEventListener("DOMContentLoaded", function () {
   sendBtn.addEventListener("click", fakeReply);
 
   loadMessages();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isDemo = localStorage.getItem("isDemo") === "true";
+  if (!isDemo) {
+    document.querySelectorAll(".verification-status").forEach((block) => {
+      const statusTitle = block.querySelector("strong");
+      const statusDate = block.querySelector("div[style]");
+      const icon = block.querySelector(".status-icon");
+      if (statusTitle) statusTitle.textContent = "Проходить верифікація працівника...";
+      if (statusDate) statusDate.textContent = "";
+      if (icon) {
+        icon.classList.remove("status-verified");
+        icon.classList.add("status-pending");
+      }
+    });
+    document.querySelectorAll(".rating-overview").forEach((block) => {
+      const avg = block.querySelector(".rating-avg");
+      const stars = block.querySelector(".rating-stars");
+      const count = block.querySelector(".rating-count");
+      if (avg) avg.textContent = "0.0";
+      if (count) count.textContent = "0 відгуків";
+      if (stars) {
+        stars.innerHTML = "★★★★★";
+        stars.style.color = "#ccc";
+      }
+    });
+  }
 });
