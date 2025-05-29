@@ -282,20 +282,20 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.classList.add("status-pending");
       }
     });
+
+    document.querySelectorAll(".rating-overview").forEach((block) => {
+      const avg = block.querySelector(".rating-avg");
+      const stars = block.querySelector(".rating-stars");
+      const count = block.querySelector(".rating-count");
+
+      if (avg) avg.textContent = "0.0";
+      if (count) count.textContent = "0 відгуків";
+      if (stars) {
+        stars.innerHTML = "★★★★★";
+        stars.style.color = "#ccc"; // сірий колір
+      }
+    });
   }
-
-  document.querySelectorAll(".rating-overview").forEach((block) => {
-    const avg = block.querySelector(".rating-avg");
-    const stars = block.querySelector(".rating-stars");
-    const count = block.querySelector(".rating-count");
-
-    if (avg) avg.textContent = "0.0";
-    if (count) count.textContent = "0 відгуків";
-    if (stars) {
-      stars.innerHTML = "★★★★★";
-      stars.style.color = "#ccc"; // сірий колір
-    }
-  });
 });
 
 // --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------
