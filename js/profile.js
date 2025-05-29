@@ -155,15 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "/Course-work/html/login.html";
   }
 
-  const logoutButton = document.querySelector(".dropdown-menu a[href='#logout']");
-
-  if (logoutButton) {
-    logoutButton.addEventListener("click", function () {
-      localStorage.clear();
-      window.location.href = "/Course-work/html/login.html";
-    });
-  }
-
   const userPackage = localStorage.getItem("userPackage");
   const packageSpan = document.querySelectorAll(".user-package");
 
@@ -206,6 +197,101 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // --------------------------------------- Профіль для нового профілю ---------------------------------------
+  const isDemo = localStorage.getItem("isDemo") === "true";
+
+  if (!isDemo) {
+    const employerBlock = document.querySelector(".role-employer");
+    if (employerBlock && employerBlock.style.display !== "none") {
+      const profileAvatar = employerBlock.querySelector(".profile-avatar");
+      if (profileAvatar) {
+        const plus = profileAvatar.querySelector(".upload-avatar");
+        profileAvatar.textContent = localStorage.getItem("avatar") || "U";
+        if (plus) profileAvatar.appendChild(plus);
+      }
+      const profileName = employerBlock.querySelector(".profile-info h1");
+      if (profileName) profileName.innerHTML = (localStorage.getItem("name") || "Ваше ім'я") + "<span class='user-package'></span>";
+    }
+
+    const workerBlock = document.querySelector(".role-worker");
+    if (workerBlock && workerBlock.style.display !== "none") {
+      const profileAvatar = workerBlock.querySelector(".profile-avatar");
+      if (profileAvatar) {
+        const plus = profileAvatar.querySelector(".upload-avatar");
+        profileAvatar.textContent = localStorage.getItem("avatar") || "U";
+        if (plus) profileAvatar.appendChild(plus);
+      }
+      const profileName = workerBlock.querySelector(".profile-info h1");
+      if (profileName) profileName.innerHTML = (localStorage.getItem("name") || "Ваше ім'я") + "<span class='user-package'></span>";
+    }
+
+    document.querySelectorAll(".profile-info p:nth-child(2)").forEach((p) => {
+      p.textContent = "Місто не вказано";
+    });
+
+    document.querySelectorAll(".profile-info p").forEach((p) => {
+      if (p.textContent.trim().startsWith("На сайті з") || p.textContent.trim().startsWith("Вкажіть дату реєстрації")) {
+        const createdAt = localStorage.getItem("createdAt");
+        if (createdAt) {
+          const date = new Date(createdAt);
+          const months = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
+          p.textContent = `На сайті з ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+        } else {
+          p.textContent = "Вкажіть дату реєстрації";
+        }
+      }
+    });
+
+    const skillsList = document.querySelector(".skills-list");
+    if (skillsList) skillsList.innerHTML = "<span class='empty-placeholder'>Додайте свої навички</span>";
+
+    const aboutSections = document.querySelectorAll(".profile-section .section-titles + p");
+    aboutSections.forEach((aboutSection) => {
+      aboutSection.textContent = "Заповніть інформацію про себе у розділі редагування профілю.";
+    });
+
+    document.querySelectorAll(".stat-value").forEach((el) => (el.textContent = "—"));
+    document.querySelectorAll(".stat-label").forEach((el) => (el.textContent = ""));
+
+    document.querySelectorAll(".experience-list, .results-grid, .review-list").forEach((list) => {
+      list.innerHTML = "<div class='empty-placeholder'>Поки що немає даних</div>";
+    });
+
+    document.querySelectorAll(".verification-status").forEach((block) => {
+      const statusTitle = block.querySelector("strong");
+      const statusDate = block.querySelector("div[style]");
+      const icon = block.querySelector(".status-icon");
+
+      const role = localStorage.getItem("role");
+      if (statusTitle) {
+        if (role === "worker") {
+          statusTitle.textContent = "Проходить верифікація працівника...";
+        } else {
+          statusTitle.textContent = "Проходить верифікація облікового запису...";
+        }
+      }
+      if (statusDate) statusDate.textContent = "";
+
+      if (icon) {
+        icon.classList.remove("status-verified");
+        icon.classList.add("status-pending");
+      }
+    });
+  }
+
+  document.querySelectorAll(".rating-overview").forEach((block) => {
+    const avg = block.querySelector(".rating-avg");
+    const stars = block.querySelector(".rating-stars");
+    const count = block.querySelector(".rating-count");
+
+    if (avg) avg.textContent = "0.0";
+    if (count) count.textContent = "0 відгуків";
+    if (stars) {
+      stars.innerHTML = "★★★★★";
+      stars.style.color = "#ccc"; // сірий колір
+    }
+  });
 });
 
 // --------------------------------------- Функціонал для попереднього перегляду аватара ---------------------------------------

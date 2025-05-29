@@ -210,7 +210,7 @@ window.mockCards = [
     contacts: "Телефон: +380501234567, Viber",
     createdAt: "2025-05-14",
   },
-  // 10 еще карточек employer
+
   {
     role: "employer",
     name: "Олександр Ж.",
@@ -442,6 +442,7 @@ window.mockCards = [
     description: "Потрібна няня для дитини 3 років. Обов'язки: догляд, прогулянки, приготування їжі для дитини, розвиток за віком.",
     requirements: "Досвід роботи з дітьми від 2 років, відповідальність, охайність, без шкідливих звичок.",
     contacts: "Телефон: +380501234567, Viber",
+    img: "/Course-work/img/nanny.png",
     bonus: "Оплачувані лікарняні, премії за гарну роботу.",
   },
   {
@@ -463,13 +464,14 @@ window.mockCards = [
     description: "Щотижневе прибирання 3-кімнатної квартири. Миття підлоги, вікон, санвузла, прасування білизни.",
     requirements: "Досвід роботи від 1 року, акуратність, пунктуальність.",
     contacts: "Телефон: +380631112233",
+    img: "/Course-work/img/housekeeper.png",
     bonus: "Чайові, гнучкий графік.",
   },
   {
     role: "worker",
     title: "Догляд за літньою людиною",
     subtitle: "Потрібна доглядальниця для бабусі",
-    category: "caretaker",
+    category: "nurse",
     location: "Дніпро, Тополя",
     locationKey: "dnipro",
     schedule: "Повний день",
@@ -484,6 +486,7 @@ window.mockCards = [
     description: "Догляд за бабусею 82 років: допомога у пересуванні, контроль прийому ліків, приготування їжі.",
     requirements: "Медична освіта вітається, досвід роботи з літніми людьми.",
     contacts: "Телефон: +380971234567",
+    img: "/Course-work/img/nurse.png",
     bonus: "Безкоштовне харчування, проживання.",
   },
   {
@@ -505,6 +508,7 @@ window.mockCards = [
     description: "Догляд за рослинами, стрижка газону, полив, підживлення.",
     requirements: "Знання садових рослин, досвід роботи від 1 року.",
     contacts: "Телефон: +380991234567",
+    img: "/Course-work/img/gardener.png",
     bonus: "Безкоштовні обіди.",
   },
   {
@@ -526,6 +530,7 @@ window.mockCards = [
     description: "Приготування домашньої їжі для сім’ї з 4 осіб, складання меню.",
     requirements: "Досвід роботи кухарем від 2 років, охайність.",
     contacts: "Телефон: +380661234567",
+    img: "/Course-work/img/cooker.png",
     bonus: "Премії, харчування за рахунок роботодавця.",
   },
   {
@@ -547,6 +552,7 @@ window.mockCards = [
     description: "Підготовка учнів до ЗНО з англійської мови, індивідуальні заняття.",
     requirements: "Вища освіта, досвід викладання від 3 років.",
     contacts: "Телефон: +380501112233",
+    img: "/Course-work/img/tutor.png",
     bonus: "Гнучкий графік, навчальні матеріали.",
   },
   {
@@ -589,13 +595,14 @@ window.mockCards = [
     description: "Вигул собак різних порід, догляд за тваринами під час відпустки власників.",
     requirements: "Любов до тварин, досвід роботи з собаками.",
     contacts: "Телефон: +380671234567",
+    img: "/Course-work/img/watching_animals.png",
     bonus: "Гнучкий графік, бонуси за постійних клієнтів.",
   },
   {
     role: "worker",
     title: "Майстер на годину",
     subtitle: "Дрібний ремонт по дому",
-    category: "handyman",
+    category: "home_craftman",
     location: "Дніпро, Центр",
     locationKey: "dnipro",
     schedule: "Гнучкий графік",
@@ -610,6 +617,7 @@ window.mockCards = [
     description: "Виконання дрібних ремонтних робіт: сантехніка, електрика, меблі.",
     requirements: "Досвід роботи, власний інструмент.",
     contacts: "Телефон: +380991112233",
+    img: "/Course-work/img/home_craftman.png",
     bonus: "Оплата за кожне замовлення.",
   },
   {
@@ -631,13 +639,14 @@ window.mockCards = [
     description: "Прибирання номерів у готелі, зміна постільної білизни, підтримка чистоти.",
     requirements: "Охайність, відповідальність.",
     contacts: "Телефон: +380681234567",
+    img: "/Course-work/img/housekeeper.png",
     bonus: "Чайові, харчування.",
   },
   {
     role: "worker",
     title: "Сиділка",
     subtitle: "Догляд за хворим",
-    category: "caretaker",
+    category: "nurse",
     location: "Харків, Салтівка",
     locationKey: "kharkiv",
     schedule: "Повний день",
@@ -652,6 +661,7 @@ window.mockCards = [
     description: "Догляд за лежачим хворим, контроль прийому ліків, гігієнічні процедури.",
     requirements: "Досвід роботи, медична освіта вітається.",
     contacts: "Телефон: +380951234567",
+    img: "/Course-work/img/nurse.png",
     bonus: "Проживання, харчування.",
   },
   {
@@ -673,13 +683,14 @@ window.mockCards = [
     description: "Розвиток, навчання, організація дозвілля для дітей 5-8 років.",
     requirements: "Педагогічна освіта, досвід роботи з дітьми.",
     contacts: "Телефон: +380991234568",
+    img: "/Course-work/img/nanny.png",
     bonus: "Навчальні матеріали, премії.",
   },
   {
     role: "worker",
     title: "Посудомийка",
     subtitle: "Робота в ресторані",
-    category: "kitchen",
+    category: "housekeeper",
     location: "Львів, Франківський",
     locationKey: "lviv",
     schedule: "Позмінно",
@@ -694,6 +705,7 @@ window.mockCards = [
     description: "Миття посуду, прибирання кухні, допомога кухарям.",
     requirements: "Охайність, відповідальність.",
     contacts: "Телефон: +380671234568",
+    img: "/Course-work/img/housekeeper.png",
     bonus: "Харчування, чайові.",
   },
   {
@@ -715,13 +727,14 @@ window.mockCards = [
     description: "Посадка, полив, обрізка дерев та кущів, догляд за квітами.",
     requirements: "Досвід роботи з рослинами.",
     contacts: "Телефон: +380991234569",
+    img: "/Course-work/img/gardener.png",
     bonus: "Безкоштовні обіди.",
   },
   {
     role: "worker",
     title: "Пральня",
     subtitle: "Прання та прасування білизни",
-    category: "laundry",
+    category: "housekeeper",
     location: "Київ, Лівобережна",
     locationKey: "kyiv",
     schedule: "Позмінно",
@@ -736,6 +749,7 @@ window.mockCards = [
     description: "Прання, прасування, складання білизни для готелю.",
     requirements: "Охайність, уважність.",
     contacts: "Телефон: +380991234570",
+    img: "/Course-work/img/housekeeper.png",
     bonus: "Харчування, премії.",
   },
   {
@@ -757,6 +771,7 @@ window.mockCards = [
     description: "Догляд за двома дітьми 2 років, організація ігор, прогулянки.",
     requirements: "Досвід роботи з малюками, рекомендації.",
     contacts: "Телефон: +380991234571",
+    img: "/Course-work/img/nanny.png",
     bonus: "Премії, харчування.",
   },
   {
@@ -778,6 +793,7 @@ window.mockCards = [
     description: "Годування, прибирання лотка, ігри з котами.",
     requirements: "Любов до тварин, акуратність.",
     contacts: "Телефон: +380991234572",
+    img: "/Course-work/img/watching_animals.png",
     bonus: "Гнучкий графік.",
   },
   {
@@ -799,13 +815,14 @@ window.mockCards = [
     description: "Підготовка учнів 9 класу до ДПА з математики.",
     requirements: "Вища освіта, досвід викладання.",
     contacts: "Телефон: +380991234573",
+    img: "/Course-work/img/tutor.png",
     bonus: "Навчальні матеріали.",
   },
   {
     role: "worker",
     title: "Майстер з ремонту",
     subtitle: "Ремонт побутової техніки",
-    category: "handyman",
+    category: "home_craftman",
     location: "Дніпро, Лівий берег",
     locationKey: "dnipro",
     schedule: "Гнучкий графік",
@@ -820,6 +837,7 @@ window.mockCards = [
     description: "Ремонт пральних машин, холодильників, дрібної техніки.",
     requirements: "Досвід роботи, власний інструмент.",
     contacts: "Телефон: +380991234574",
+    img: "/Course-work/img/home_craftman.png",
     bonus: "Оплата за кожне замовлення.",
   },
   {
@@ -841,6 +859,7 @@ window.mockCards = [
     description: "Прибирання офісних приміщень, виніс сміття, миття підлоги.",
     requirements: "Охайність, відповідальність.",
     contacts: "Телефон: +380991234575",
+    img: "/Course-work/img/housekeeper.png",
     bonus: "Чайові.",
   },
 ];
