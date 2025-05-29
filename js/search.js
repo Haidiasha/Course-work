@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return `
       <div class="result-card">
         <div class="card-image">
-          <img src="${card.img}" alt="${card.name}" />
+         <img src="${card.img}" alt="${card.name}" width="405" height="200" style="object-fit:cover;" />
           <div class="card-badge">${card.badge}</div>
         </div>
         <div class="card-content">
