@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const allUsers = getRegisteredUsers().concat(users);
       if (allUsers.some((u) => u.email === email)) {
-        alert("Користувач з такою поштою вже існує!");
+        showCustomAlert("Користувач з такою поштою вже існує!");
         return;
       }
 
