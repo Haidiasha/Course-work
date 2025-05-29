@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     registerForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const name = document.getElementById("reg-name").value;
+      const name = document.getElementById("reg-name").value.trim();
       const email = document.getElementById("reg-email").value;
       const phone = document.getElementById("reg-phone").value.trim();
       const password = document.getElementById("reg-password").value;
@@ -120,6 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (password !== confirmPassword) {
         showCustomAlert("Паролі не співпадають!");
+        return;
+      }
+
+      if (!/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s'-]+$/.test(name) || name.length < 2) {
+        showCustomAlert("Ім'я може містити лише літери кирилиці або латиниці, пробіли, апостроф та дефіс, і має бути не коротше 2 символів.");
         return;
       }
 

@@ -2,7 +2,7 @@ function checkAuth(e) {
   const role = localStorage.getItem("role");
   const link = e.target.closest("a");
 
-  if (link && link.getAttribute("href").includes("search.html")) {
+  if (link && (link.getAttribute("href").includes("search.html") || link.getAttribute("href").includes("add-order.html"))) {
     if (!role) {
       e.preventDefault();
       showAuthModal();
